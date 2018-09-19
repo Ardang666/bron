@@ -1,6 +1,6 @@
 [user]
-	email = ardang2015@gmail.com
-	name = Ardang666
+#	email = ardang2015@gmail.com
+#	name = Ardang666
 [core]
 	editor = vim
 [alias]

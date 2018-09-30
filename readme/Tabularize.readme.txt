@@ -1,0 +1,14 @@
+使用 :
+输入 : Tab /.  | 按.对齐
+     : Tab /=> | 按=>对齐
+
+英文说明：
+A format specifier is either l, r, or c, followed by one or more digits.
+l: the field will be left aligned, 
+r: right aligning
+c: center aligning
+
+The number following the letter is the number of spaces padding 
+to insert before the start of the next field.
+
+

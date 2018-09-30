@@ -1,3 +1,4 @@
+cd ~
 sudo apt install -y vim vim-scripts vim-gtk vim-gnome
 
 # vundle
@@ -6,7 +7,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # https://www.v2ex.com/t/341751
 sudo apt install -y llvm-3.9 clang-3.9 libclang-3.9-dev libboost-all-dev
 sudo apt install -y cmake
-#git clone --recursive https://github.com/Valloric/YouCompleteMe.git && git submodule update --init --recursive
+git clone --recursive https://github.com/Valloric/YouCompleteMe.git && git submodule update --init --recursive
 
 mkdir ~/.ycm_build
 cd ~/.ycm_build
@@ -17,32 +18,26 @@ cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.v
 rm ~/.ycm_build -rf
 
 # ctags
-# https://www.cnblogs.com/zjutzz/p/9393397.html
-sudo apt -y install autoconf
-cd /tmp
-git clone https://github.com/universal-ctags/ctags
-cd ctags
-./autogen.sh
-./configure --prefix=/opt/software/universal-ctags  # 我的安装路径。你按自己的情况调整。
-make -j8
-sudo make install
-
-sudo ln -s /opt/software/universal-ctags/bin/ctags /usr/bin/ctags
+sudo apt -y install exuberant-ctags
 
 # cscope
 sudo apt -y install cscope
 
 # powerline
 sudo apt -y install powerline
+mkdir -p ~/tmp/powerline
+cd ~/tmp/powerline
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 mv PowerlineSymbols.otf ~/.local/share/fonts/
 fc-cache -vf ~/.local/share/fonts/
 mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+cd ~
 
-cp ~/.vimrc ~/.vimrc.bak.$DATA
-mv ~/.vimself ~/.vimself
+mv ~/.vimrc ~/.vimrc.bak.$DATA
+mv ~/.vimself ~/.vimself.bak
 
-cp .vimrc ~/.vimrc
-cp -r .vimself ~/.vimself
+cd ~/bron
+cp .vimrc ~
+cp -r .vimself ~
 

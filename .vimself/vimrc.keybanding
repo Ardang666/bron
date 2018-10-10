@@ -1,10 +1,5 @@
 let mapleader=","
 
-" [airline]
-" 设置切换Buffer快捷键"
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
-
 " [cscope]
 nmap <Leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <Leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
@@ -17,4 +12,34 @@ nmap <Leader>cd :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " [tagbar]
 " 关闭NERDTree快捷键
-map <Leader>ntt :NERDTreeToggle<CR>
+map <Leader>nt :NERDTreeToggle<CR>
+
+" [airline]
+" 映射切换buffer的键位
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<CR>
+
+" [surround]
+" 快捷键 功能
+" ds.     删除包围结构。当光标在(Hello *world)中处于*位置时按ds)  会得到结果 Hello world!
+" cs.     改变包围结构。当光标在(Hello *world)中处于*位置时按cs)] 会得到结果[Hello world!]
+" ysiw.   包围当前词。  当光标在 Hello w*orld 中处于*位置时按ysiw)会得到结果 Hello (world)!
+" yss.    包围当前行。  当光标在 Hello w*orld 中处于*位置时按yss) 会得到结果(Hello world!)
+
+" [ctrl-p]
+" 快捷键                          功能
+" Ctrl+p                          打开ctrlp并定位在file mode
+" ?                               查看帮助
+" F5                              刷新当前目录
+" Ctrl+f,Ctrl+d                   在mode间左右切换
+" Ctrl+r                          切换正则表达式mode
+" Ctrl+j,Ctrl+k                   在搜索结果间上下移动
+" Ctrl+t                          在新tab打开选中结果
+" Ctrl+v                          在新vsplit打开选中结果
+" Ctrl+x                          在新split打开选中结果
+" Ctrl+z then Ctrl+o              先标记多个文件，然后一起打开
+" …                               向上跳一层级
+" :25                             跳转到文件第25行
+" :/any\:\ string                 跳转到第一个any: string
+" :+setfiletype\ myfiletype|25    将文件类型设为myfiletype并跳转到第25行
+" :diffthis                       对前4个用Ctrl+z标记的文件比较不同

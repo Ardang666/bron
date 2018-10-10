@@ -20,3 +20,9 @@ set expandtab
 
 set nu
 set hls
+
+" set cuc
+set cul
+
+" let loaded_matchparen = 0
+hi MatchParen ctermbg=Red guibg=lightblue

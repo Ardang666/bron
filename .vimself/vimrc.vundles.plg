@@ -62,6 +62,14 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'luochen1990/rainbow'
+
+" python
+Plugin 'rkulla/pydiction.git'
+
 call vundle#end()            " required
 
 filetype plugin indent on    " required

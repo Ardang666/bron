@@ -5,3 +5,5 @@ sudo service smbd restart
 
 sudo useradd user
 sudo smbpasswd -a user
+
+sudo mkdir /home/share

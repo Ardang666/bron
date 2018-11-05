@@ -44,3 +44,4 @@ popd
 cp .vimrc ~
 cp -r .vimself ~
 
+rm ~/tmp -rf

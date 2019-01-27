@@ -4,3 +4,10 @@ cd github_tmux
 sh autogen.sh
 ./configure && make
 sudo make install
+cd -
+rm github_tmux -rf
+
+# 
+git clone https://github.com/gpakosz/.tmux.git
+cp .tmux/.tmux.conf* ~
+rm .tmux -rf

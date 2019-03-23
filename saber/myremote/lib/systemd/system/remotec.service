@@ -1,0 +1,14 @@
+[Unit]
+Description=Remotec Service
+After=syslog.target  network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/remotec -c /etc/remotec/remotec.ini
+Restart= always
+RestartSec=1min
+ExecStop=/usr/bin/killall remotec
+
+[Install]
+WantedBy=multi-user.target

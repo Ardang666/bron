@@ -1,0 +1,14 @@
+auto lo
+iface lo inet loopback
+
+#auto enp0s31f6
+#iface enp0s31f6 inet dhcp
+auto enp0s31f6
+iface enp0s31f6 inet static
+address 192.168.1.204
+netmask 255.255.255.0
+gateway 192.168.1.1
+boardcast 192.168.1.255
+
+dns-nameserver 114.114.114.114
+dns-nameserver 202.96.128.86
